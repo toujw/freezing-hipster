@@ -1,32 +1,42 @@
 # freezing-hipster
 
-FIXME: description
+Downloads historic weather data through wunderground.com's API and outputs the results to a CSV file.
+
+Currently outputs:
+* max humidity
+* min humidity
+* max temperature
+* min temperature
+* mean barometric pressure
 
 ## Installation
 
-Download from http://example.com/FIXME.
+Clone the source and run:
+
+    $ lein uberjar
 
 ## Usage
 
-FIXME: explanation
+    $ java -jar freezing-hipster.jar KEY LOCATION FROM-DATE TO-DATE OUT-FILE
 
-    $ java -jar freezing-hipster-0.1.0-standalone.jar [args]
-
-## Options
-
-FIXME: listing of options this app accepts.
+You need a key from wunderground.com to run this.
 
 ## Examples
 
-...
-
-### Bugs
-
-...
-
-### Any Other Sections
-### That You Think
-### Might be Useful
+    $ java -jar freezing-hipster.jar 0123456789abcdef TX/Austin 20130528 20130529 out.csv
+    $ java -jar freezing-hipster.jar 0123456789abcdef 73301 20130528 20130529 out.csv
+    
+## TODO
+* More output data
+* More output formats
+    * JSON
+    * XML
+    * Google Drive
+* Alternate weather sources
+    * http://www.almanac.com
+    * http://www.intellicast.com
+    * ftp://ftp3.ncdc.noaa.gov/pub/data/noaa/
+    * http://graphical.weather.gov/xml/
 
 ## License
 
